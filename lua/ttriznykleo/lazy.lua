@@ -65,6 +65,8 @@ local plugins = {
 		"stevearc/conform.nvim",
 		opts = {},
 	},
+	"tpope/vim-commentary",
+	"tpope/vim-surround",
 }
 
 local opts = {}
