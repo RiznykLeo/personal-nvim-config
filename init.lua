@@ -2,8 +2,7 @@ require("ttriznykleo")
 
 local function safe_replace_commands()
 	local commands = {
-		"%s/Room/FacilityLocation/g",
-		"%s/room/facilityLocation/g",
+		"%s/UNASSIGNED/DOING/g",
 	}
 
 	for _, cmd in ipairs(commands) do

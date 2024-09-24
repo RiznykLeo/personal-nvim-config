@@ -93,6 +93,8 @@ local plugins = {
 			vim.cmd([[silent! GoInstallDeps]])
 		end,
 	},
+
+	{ "NLKNguyen/papercolor-theme", name = "papercolor" },
 }
 
 local opts = {}
