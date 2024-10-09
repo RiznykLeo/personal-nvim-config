@@ -1,5 +1,4 @@
 require("riznykleo")
-
 local function safe_replace_commands()
 	local commands = {
 		"%s/UNASSIGNED/DOING/g",
