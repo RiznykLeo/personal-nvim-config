@@ -31,29 +31,14 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
-vim.keymap.set("n", "<leader><leader>", function()
-	vim.cmd("so")
-end)
--- Debugger
---  "Add breakpoint at line"
-vim.keymap.set("n", "<leader>b", "<cmd>DapToggleBreakpoint<CR>")
--- "Open debugging sidebar
-vim.keymap.set("n", "<leader>bs", function()
-	local widgets = require("dap.ui.widgets")
-	local sidebar = widgets.sidebar(widgets.scopes)
-	sidebar.open()
-end)
--- "Debug go test"
-vim.keymap.set("n", "<leader>gt", function()
-	require("dap-go").debug_test()
-end)
--- "Debug last go test"
-vim.keymap.set("n", "<leader>gtl", function()
-	require("dap-go").debug_last()
-end)
 
--- Gopher
--- -- Add json struct tags
--- vim.keymap.set("n", "<leader>gsj", "<cmd> GoTagAdd json <CR>")
--- -- Add yaml struct tags
--- vim.keymap.set("n", "<leader>gsy", "<cmd> GoTagAdd yaml <CR>")
+-- Remap for Enter key
+vim.api.nvim_set_keymap('n', '<C-j>', '<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<C-j>', '<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '<C-j>', '<CR>', { noremap = true, silent = true })
+
+
+
+vim.keymap.set("n", "<leader><leader>", function()
+  vim.cmd("so")
+end)

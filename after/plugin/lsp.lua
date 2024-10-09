@@ -6,7 +6,7 @@ end)
 
 require("mason").setup({})
 require("mason-lspconfig").setup({
-	ensure_installed = { "tsserver", "eslint@4.8.0" },
+	ensure_installed = { "ts_ls", "eslint@4.8.0" },
 	handlers = {
 		lsp.default_setup,
 		lua_ls = function()
