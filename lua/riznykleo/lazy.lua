@@ -11,11 +11,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 local plugins = {
-	{ "nvim-telescope/telescope.nvim", version = "0.1.4", dependencies = { "nvim-lua/plenary.nvim" } },
-	{ "rose-pine/neovim", name = "rose-pine" },
-	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-	"ThePrimeagen/harpoon",
-	"tpope/vim-fugitive",
 	{
 		"VonHeikemen/lsp-zero.nvim",
 		branch = "v3.x",
@@ -32,6 +27,11 @@ local plugins = {
 			{ "rafamadriz/friendly-snippets" },
 		},
 	},
+	{ "nvim-telescope/telescope.nvim", version = "0.1.4", dependencies = { "nvim-lua/plenary.nvim" } },
+	{ "rose-pine/neovim", name = "rose-pine" },
+	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+	"ThePrimeagen/harpoon",
+	"tpope/vim-fugitive",
 	{ "nvim-lualine/lualine.nvim", dependencies = { "nvim-tree/nvim-web-devicons", lazy = true } },
 	"HiPhish/rainbow-delimiters.nvim",
 	-- "prettier/vim-prettier",
@@ -42,7 +42,6 @@ local plugins = {
 	{ "stevearc/oil.nvim", opts = {} },
 	{ "NLKNguyen/papercolor-theme", name = "papercolor" },
 	{ "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" }, opts = {} },
-	{ "kevinhwang91/nvim-ufo", dependencies = { "kevinhwang91/promise-async" } },
 
 	-- AI
 	{
