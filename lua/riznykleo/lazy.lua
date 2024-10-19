@@ -28,20 +28,25 @@ local plugins = {
 		},
 	},
 	{ "nvim-telescope/telescope.nvim", version = "0.1.4", dependencies = { "nvim-lua/plenary.nvim" } },
-	{ "rose-pine/neovim", name = "rose-pine" },
 	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 	"ThePrimeagen/harpoon",
 	"tpope/vim-fugitive",
 	{ "nvim-lualine/lualine.nvim", dependencies = { "nvim-tree/nvim-web-devicons", lazy = true } },
 	"HiPhish/rainbow-delimiters.nvim",
-	-- "prettier/vim-prettier",
 	"lambdalisue/suda.vim",
 	"tpope/vim-commentary",
 	"tpope/vim-surround",
 	{ "stevearc/conform.nvim", opts = {} },
 	{ "stevearc/oil.nvim", opts = {} },
-	{ "NLKNguyen/papercolor-theme", name = "papercolor" },
 	{ "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" }, opts = {} },
+
+	-- THEMES
+	{ "rose-pine/neovim", name = "rose-pine" },
+	{ "tpope/vim-vividchalk", name = "vividchalk" },
+	{ "vim-scripts/darkbone.vim", name = "darkbone" },
+	{ "mrkn/mrkn256.vim", name = "mrkn256" },
+	{ "fneu/breezy", name = "breezy" },
+	--
 
 	-- AI
 	{
