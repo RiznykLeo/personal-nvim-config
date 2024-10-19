@@ -42,8 +42,8 @@ local plugins = {
 
 	-- THEMES
 	{ "rose-pine/neovim", name = "rose-pine" },
-	{ "tpope/vim-vividchalk", name = "vividchalk" },
 	{ "vim-scripts/darkbone.vim", name = "darkbone" },
+	{ "tpope/vim-vividchalk", name = "vividchalk" },
 	{ "mrkn/mrkn256.vim", name = "mrkn256" },
 	{ "fneu/breezy", name = "breezy" },
 	--
