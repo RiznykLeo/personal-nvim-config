@@ -39,6 +39,30 @@ local plugins = {
 	{ "stevearc/conform.nvim", opts = {} },
 	{ "stevearc/oil.nvim", opts = {} },
 	{ "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" }, opts = {} },
+	{ "mfussenegger/nvim-dap" },
+	{
+		"leoluz/nvim-dap-go",
+		ft = "go",
+		dependencies = "mfussenegger/nvim-dap",
+		config = function(_, opts)
+			require("dap-go").setup(opts)
+		end,
+	},
+	{
+		"olexsmir/gopher.nvim",
+		ft = "go",
+		config = function(_, opts)
+			require("gopher").setup(opts)
+		end,
+		build = function()
+			vim.cmd.GoInstallDeps()
+		end,
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-treesitter/nvim-treesitter",
+			"mfussenegger/nvim-dap", -- (optional) only if you use `gopher.dap`
+		},
+	},
 
 	-- THEMES
 	{ "rose-pine/neovim", name = "rose-pine" },

@@ -39,3 +39,21 @@ vim.api.nvim_set_keymap("v", "<C-j>", "<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader><leader>", function()
 	vim.cmd("so")
 end)
+
+-- DAP
+vim.keymap.set("n", "<leader>db", "<cmd> DapToggleBreakpoint <CR>", { silent = true })
+vim.keymap.set("n", "<leader>dui", function()
+	local widgets = require("dap.ui.widgets")
+	local sidebar = widgets.sidebar(widgets.scopes)
+	sidebar.open()
+end)
+
+-- DAP GO
+
+vim.keymap.set("n", "<leader>dgt", function()
+	require("dap-go").debug_test()
+end)
+
+vim.keymap.set("n", "<leader>dgl", function()
+	require("dap-go").debug_last()
+end)
