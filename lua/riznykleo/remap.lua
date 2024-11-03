@@ -41,19 +41,19 @@ vim.keymap.set("n", "<leader><leader>", function()
 end)
 
 -- DAP
-vim.keymap.set("n", "<leader>db", "<cmd> DapToggleBreakpoint <CR>", { silent = true })
-vim.keymap.set("n", "<leader>dui", function()
-	local widgets = require("dap.ui.widgets")
-	local sidebar = widgets.sidebar(widgets.scopes)
-	sidebar.open()
-end)
+-- vim.keymap.set("n", "<leader>db", "<cmd> DapToggleBreakpoint <CR>", { silent = true })
+-- vim.keymap.set("n", "<leader>dui", function()
+-- 	local widgets = require("dap.ui.widgets")
+-- 	local sidebar = widgets.sidebar(widgets.scopes)
+-- 	sidebar.open()
+-- end)
 
--- DAP GO
+-- -- DAP GO
 
-vim.keymap.set("n", "<leader>dgt", function()
-	require("dap-go").debug_test()
-end)
+-- vim.keymap.set("n", "<leader>dgt", function()
+-- 	require("dap-go").debug_test()
+-- end)
 
-vim.keymap.set("n", "<leader>dgl", function()
-	require("dap-go").debug_last()
-end)
+-- vim.keymap.set("n", "<leader>dgl", function()
+-- 	require("dap-go").debug_last()
+-- end)
