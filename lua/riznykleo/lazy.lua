@@ -63,6 +63,7 @@ local plugins = {
 			"mfussenegger/nvim-dap", -- (optional) only if you use `gopher.dap`
 		},
 	},
+	{ "kevinhwang91/nvim-ufo", dependencies = { "kevinhwang91/promise-async" } },
 
 	-- THEMES
 	{ "rose-pine/neovim", name = "rose-pine" },
