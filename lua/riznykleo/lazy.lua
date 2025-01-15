@@ -11,6 +11,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 local plugins = {
+	-- LSP
 	{
 		"VonHeikemen/lsp-zero.nvim",
 		branch = "v3.x",
@@ -27,19 +28,30 @@ local plugins = {
 			{ "rafamadriz/friendly-snippets" },
 		},
 	},
+	--
+
 	{ "nvim-telescope/telescope.nvim", version = "0.1.4", dependencies = { "nvim-lua/plenary.nvim" } },
 	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-	"ThePrimeagen/harpoon",
-	"tpope/vim-fugitive",
-	{ "nvim-lualine/lualine.nvim", dependencies = { "nvim-tree/nvim-web-devicons", lazy = true } },
-	"HiPhish/rainbow-delimiters.nvim",
-	"lambdalisue/suda.vim",
-	"tpope/vim-commentary",
-	"tpope/vim-surround",
 	{ "stevearc/conform.nvim", opts = {} },
 	{ "stevearc/oil.nvim", opts = {} },
-	{ "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" }, opts = {} },
 	{ "mfussenegger/nvim-dap" },
+	{ "nvim-lualine/lualine.nvim", dependencies = { "nvim-tree/nvim-web-devicons", lazy = true } },
+	{ "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" }, opts = {} },
+	{ "kevinhwang91/nvim-ufo", dependencies = { "kevinhwang91/promise-async" } }, --folds
+	"ThePrimeagen/harpoon",
+	"lambdalisue/suda.vim",
+	"HiPhish/rainbow-delimiters.nvim",
+	"tpope/vim-fugitive",
+	"tpope/vim-commentary",
+	"tpope/vim-surround",
+
+	{
+		"m4xshen/hardtime.nvim",
+		dependencies = { "MunifTanjim/nui.nvim" },
+		opts = {},
+	}, -- to disable ":Hardtime disable" or ":Hardtime toggle"
+
+	-- GO
 	{
 		"leoluz/nvim-dap-go",
 		ft = "go",
@@ -63,7 +75,7 @@ local plugins = {
 			"mfussenegger/nvim-dap", -- (optional) only if you use `gopher.dap`
 		},
 	},
-	{ "kevinhwang91/nvim-ufo", dependencies = { "kevinhwang91/promise-async" } },
+	--
 
 	-- THEMES
 	{ "rose-pine/neovim", name = "rose-pine" },
